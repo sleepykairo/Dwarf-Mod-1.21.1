@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dwarfmod:block/mithril_block"
+    }
+  }
+}
