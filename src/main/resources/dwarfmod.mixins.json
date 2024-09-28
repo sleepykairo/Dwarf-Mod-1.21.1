@@ -3,7 +3,8 @@
 	"package": "net.sleepykairo.dwarfmod.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-      "AnvilScreenMixin"
+      "AbstractMinecartEntityMixin",
+      "EntityAccessMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

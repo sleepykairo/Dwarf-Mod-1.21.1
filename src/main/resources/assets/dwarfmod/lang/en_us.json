@@ -5,6 +5,12 @@
   "item.dwarfmod.mithril_pickaxe": "Mithril Pickaxe",
   "item.dwarfmod.mithril_axe": "Mithril Axe",
   "item.dwarfmod.mithril_hoe": "Mithril Hoe",
+  "item.dwarfmod.mithril_helmet": "Mithril Helmet",
+  "item.dwarfmod.mithril_chestplate": "Mithril Chestplate",
+  "item.dwarfmod.mithril_leggings": "Mithril Leggings",
+  "item.dwarfmod.mithril_boots": "Mithril Boots",
 
-  "block.dwarfmod.mithril_block": "Mithril Block"
+  "block.dwarfmod.mithril_block": "Mithril Block",
+  "block.dwarfmod.mithril_ore": "Mithril Ore",
+  "block.dwarfmod.deepslate_mithril_ore": "Deepslate Mithril Ore"
 }

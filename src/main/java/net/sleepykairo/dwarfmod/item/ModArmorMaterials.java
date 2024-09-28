@@ -12,20 +12,22 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
+import net.sleepykairo.dwarfmod.DwarfMod;
 
 import java.util.EnumMap;
 import java.util.List;
 import java.util.function.Supplier;
 
-public enum ModArmorMaterials {
-    ;
-    public static final RegistryEntry<ArmorMaterial> MITHRIL = register("mithril", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+public class ModArmorMaterials {
+    public static final RegistryEntry<ArmorMaterial> MITHRIL = register("mithril",
+            Util.make(new EnumMap(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
         map.put(ArmorItem.Type.BODY, 11);
-    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.0F, () -> Ingredient.ofItems(ModItems.MITHRIL_INGOT));
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.0F, () -> Ingredient.ofItems(ModItems.MITHRIL_INGOT),
+            List.of(new ArmorMaterial.Layer(Identifier.of(DwarfMod.MOD_ID, "mithril"))));
 
 //    public static RegistryEntry<ArmorMaterial> getDefault(Registry<ArmorMaterial> registry) {
 //        return LEATHER;
@@ -62,7 +64,7 @@ public enum ModArmorMaterials {
 
         return Registry.registerReference(
                 Registries.ARMOR_MATERIAL,
-                Identifier.ofVanilla(id),
+                Identifier.of(id),
                 new ArmorMaterial(enumMap, enchantability, equipSound, repairIngredient, layers, toughness, knockbackResistance)
         );
     }

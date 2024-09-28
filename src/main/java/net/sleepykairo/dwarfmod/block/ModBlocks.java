@@ -14,6 +14,10 @@ public class ModBlocks {
 
     public static final Block MITHRIL_BLOCK = registerBlock("mithril_block",
             new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+    public static final Block MITHRIL_ORE = registerBlock("mithril_ore",
+            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)));
+    public static final Block DEEPSLATE_MITHRIL_ORE = registerBlock("deepslate_mithril_ore",
+            new Block(AbstractBlock.Settings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

@@ -18,6 +18,9 @@
 		"main": [
 			"net.sleepykairo.dwarfmod.DwarfMod"
 		],
+		"client": [
+			"net.sleepykairo.dwarfmod.DwarfModClient"
+		],
 		"fabric-datagen": [
 			"net.sleepykairo.dwarfmod.DwarfModDataGenerator"
 		]
