@@ -1,18 +1,27 @@
 package net.sleepykairo.dwarfmod.entity.custom;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.vehicle.AbstractMinecartEntity;
-import net.minecraft.entity.vehicle.MinecartEntity;
+import net.minecraft.entity.vehicle.*;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import net.sleepykairo.dwarfmod.entity.ModEntities;
+import net.sleepykairo.dwarfmod.item.ModItems;
+import net.sleepykairo.dwarfmod.item.custom.MithrilMinecartItem;
+import org.jetbrains.annotations.Nullable;
 
 public class MithrilMinecartEntity extends MinecartEntity {
-    public MithrilMinecartEntity(EntityType<?> entityType, World world) {
+    public MithrilMinecartEntity(World world, double x, double y, double z) {
+        super(world, x, y, z);
+    }
+
+    public MithrilMinecartEntity(EntityType<? extends Entity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -46,12 +55,18 @@ public class MithrilMinecartEntity extends MinecartEntity {
     }
 
     @Override
-    public AbstractMinecartEntity.Type getMinecartType() {
-        return AbstractMinecartEntity.Type.RIDEABLE;
-    }
-
-    @Override
     public Item asItem() {
-        return Items.MINECART;
+        return ModItems.MITHRIL_MINECART;
+    }
+    public static AbstractMinecartEntity create(
+            ServerWorld world, double x, double y, double z, ItemStack stack, @Nullable PlayerEntity player
+    ) {
+        AbstractMinecartEntity abstractMinecartEntity = new MithrilMinecartEntity(world, x, y, z);
+        EntityType.copier(world, stack, player).accept(abstractMinecartEntity);
+        return abstractMinecartEntity;
+    }
+    @Override
+    public ItemStack getPickBlockStack() {
+        return new ItemStack(ModItems.MITHRIL_MINECART);
     }
 }

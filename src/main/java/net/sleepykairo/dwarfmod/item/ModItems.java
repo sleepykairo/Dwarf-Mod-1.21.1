@@ -1,10 +1,12 @@
 package net.sleepykairo.dwarfmod.item;
 
+import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.sleepykairo.dwarfmod.DwarfMod;
+import net.sleepykairo.dwarfmod.item.custom.MithrilMinecartItem;
 
 public class ModItems {
 
@@ -41,6 +43,7 @@ public class ModItems {
                     ModToolMaterials.MITHRIL, new Item.Settings().fireproof().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.MITHRIL, -4.0F, 0.0F))
             )
     );
+    public static final Item MITHRIL_MINECART = registerItem("mithril_minecart", new MithrilMinecartItem(AbstractMinecartEntity.Type.RIDEABLE, new Item.Settings()));
 
     public static final Item MITHRIL_HELMET = registerItem(
             "mithril_helmet",
