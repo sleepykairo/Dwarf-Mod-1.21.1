@@ -6,15 +6,21 @@ import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.DispenserBehavior;
 import net.minecraft.block.dispenser.ItemDispenserBehavior;
 import net.minecraft.block.enums.RailShape;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
+import net.minecraft.inventory.StackReference;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.MinecartItem;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.ClickType;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPointer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -114,5 +120,12 @@ public class MithrilMinecartItem extends Item {
             itemStack.decrement(1);
             return ActionResult.success(world.isClient);
         }
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        MithrilMinecartEntity mithrilMinecartEntity = new MithrilMinecartEntity(world, user.getX(), user.getY(), user.getZ());
+        world.spawnEntity(mithrilMinecartEntity);
+        return TypedActionResult.consume(user.getStackInHand(hand));
     }
 }
