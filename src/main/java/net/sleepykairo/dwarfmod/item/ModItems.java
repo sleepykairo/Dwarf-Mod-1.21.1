@@ -43,7 +43,7 @@ public class ModItems {
                     ModToolMaterials.MITHRIL, new Item.Settings().fireproof().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.MITHRIL, -4.0F, 0.0F))
             )
     );
-    public static final Item MITHRIL_MINECART = registerItem("mithril_minecart", new MithrilMinecartItem(AbstractMinecartEntity.Type.RIDEABLE, new Item.Settings()));
+    public static final Item MITHRIL_MINECART = registerItem("mithril_minecart", new MithrilMinecartItem(AbstractMinecartEntity.Type.CHEST, new Item.Settings()));
 
     public static final Item MITHRIL_HELMET = registerItem(
             "mithril_helmet",

@@ -58,12 +58,12 @@ public class MithrilMinecartEntity extends MinecartEntity {
     public Item asItem() {
         return ModItems.MITHRIL_MINECART;
     }
-    public static AbstractMinecartEntity create(
+    public static MithrilMinecartEntity create(
             ServerWorld world, double x, double y, double z, ItemStack stack, @Nullable PlayerEntity player
     ) {
-        AbstractMinecartEntity abstractMinecartEntity = new MithrilMinecartEntity(world, x, y, z);
-        EntityType.copier(world, stack, player).accept(abstractMinecartEntity);
-        return abstractMinecartEntity;
+        MithrilMinecartEntity mithrilMinecartEntity = new MithrilMinecartEntity(world, x, y, z);
+        EntityType.copier(world, stack, player).accept(mithrilMinecartEntity);
+        return mithrilMinecartEntity;
     }
     @Override
     public ItemStack getPickBlockStack() {

@@ -6,6 +6,7 @@ import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.DispenserBehavior;
 import net.minecraft.block.dispenser.ItemDispenserBehavior;
 import net.minecraft.block.enums.RailShape;
+import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -63,8 +64,10 @@ public class MithrilMinecartItem extends Item {
                 }
             }
 
-            AbstractMinecartEntity abstractMinecartEntity = MithrilMinecartEntity.create(serverWorld, d, e + g, f, stack, null);
-            serverWorld.spawnEntity(abstractMinecartEntity);
+//            MithrilMinecartEntity mithrilMinecartEntity = MithrilMinecartEntity.create(serverWorld, d, e + g, f, stack, null);
+            MithrilMinecartEntity mithrilMinecartEntity = new MithrilMinecartEntity(serverWorld, d, e + g, f);
+            serverWorld.spawnEntity(mithrilMinecartEntity);
+
             stack.decrement(1);
             return stack;
         }
@@ -100,10 +103,11 @@ public class MithrilMinecartItem extends Item {
                     d = 0.5;
                 }
 
-                AbstractMinecartEntity abstractMinecartEntity = MithrilMinecartEntity.create(
-                        serverWorld, (double)blockPos.getX() + 0.5, (double)blockPos.getY() + 0.0625 + d, (double)blockPos.getZ() + 0.5, itemStack, context.getPlayer()
-                );
-                serverWorld.spawnEntity(abstractMinecartEntity);
+//                MithrilMinecartEntity mithrilMinecartEntity = new MithrilMinecartEntity(
+//                        serverWorld, (double)blockPos.getX() + 0.5, (double)blockPos.getY() + 0.0625 + d, (double)blockPos.getZ() + 0.5
+//                );
+                MithrilMinecartEntity mithrilMinecartEntity = new MithrilMinecartEntity(serverWorld, (double)blockPos.getX() + 0.5, (double)blockPos.getY() + 0.0625 + d, (double)blockPos.getZ() + 0.5);
+                serverWorld.spawnEntity(mithrilMinecartEntity);
                 serverWorld.emitGameEvent(GameEvent.ENTITY_PLACE, blockPos, GameEvent.Emitter.of(context.getPlayer(), serverWorld.getBlockState(blockPos.down())));
             }
 
