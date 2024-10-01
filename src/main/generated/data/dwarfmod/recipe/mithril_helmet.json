@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "dwarfmod:mithril_ingot"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "M M",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "dwarfmod:mithril_helmet"
+  }
+}
