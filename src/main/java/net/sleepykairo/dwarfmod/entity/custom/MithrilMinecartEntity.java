@@ -17,12 +17,16 @@ import net.sleepykairo.dwarfmod.item.custom.MithrilMinecartItem;
 import org.jetbrains.annotations.Nullable;
 
 public class MithrilMinecartEntity extends MinecartEntity {
-    public MithrilMinecartEntity(World world, double x, double y, double z) {
-        super(world, x, y, z);
-    }
-
     public MithrilMinecartEntity(EntityType<? extends Entity> entityType, World world) {
         super(entityType, world);
+    }
+
+    public MithrilMinecartEntity(World world, double x, double y, double z) {
+        super(ModEntities.MITHRIL_MINECART_ENTITY, world);
+        this.setPosition(x, y, z);
+        this.prevX = x;
+        this.prevY = y;
+        this.prevZ = z;
     }
 
     @Override
@@ -68,5 +72,10 @@ public class MithrilMinecartEntity extends MinecartEntity {
     @Override
     public ItemStack getPickBlockStack() {
         return new ItemStack(ModItems.MITHRIL_MINECART);
+    }
+
+    @Override
+    protected double getMaxSpeed() {
+        return super.getMaxSpeed() * (1 + ((double) 2 / 3));
     }
 }

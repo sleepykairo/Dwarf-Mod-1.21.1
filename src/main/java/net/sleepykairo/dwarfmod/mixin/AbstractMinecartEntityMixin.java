@@ -13,6 +13,6 @@ public abstract class AbstractMinecartEntityMixin extends EntityAccessMixin{
 
     @ModifyReturnValue(method = "getMaxSpeed", at = @At("RETURN"))
     private double inject(double original) {
-        return ((touchingWater ? 4.0 : 8.0) / 20.0) * 2.5f;
+        return ((touchingWater ? 4.0 : 8.0) / 20.0) * 1.5f;
     }
 }

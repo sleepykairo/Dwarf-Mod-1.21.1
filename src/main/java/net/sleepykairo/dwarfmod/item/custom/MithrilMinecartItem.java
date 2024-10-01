@@ -121,11 +121,4 @@ public class MithrilMinecartItem extends Item {
             return ActionResult.success(world.isClient);
         }
     }
-
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        MithrilMinecartEntity mithrilMinecartEntity = new MithrilMinecartEntity(world, user.getX(), user.getY(), user.getZ());
-        world.spawnEntity(mithrilMinecartEntity);
-        return TypedActionResult.consume(user.getStackInHand(hand));
-    }
 }

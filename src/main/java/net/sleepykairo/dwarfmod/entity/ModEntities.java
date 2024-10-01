@@ -16,7 +16,7 @@ public class ModEntities {
             Registries.ENTITY_TYPE,
             Identifier.of(DwarfMod.MOD_ID, "mithril_minecart"),
             EntityType.Builder.<MithrilMinecartEntity>create(MithrilMinecartEntity::new, SpawnGroup.CREATURE).
-                    dimensions(0.98f, 0.75f).passengerAttachments(0.1875F).maxTrackingRange(8).build("mithril_minecart")
+                    dimensions(0.98f, 0.75f).passengerAttachments(0.1875F).makeFireImmune().maxTrackingRange(8).build("mithril_minecart")
     );
 
     public static void registerModEntities() {
