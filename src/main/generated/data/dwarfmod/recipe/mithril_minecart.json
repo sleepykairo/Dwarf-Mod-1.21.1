@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:minecart"
+    },
+    "M": {
+      "item": "dwarfmod:mithril_ingot"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "MCM",
+    "OOO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dwarfmod:mithril_minecart"
+  }
+}

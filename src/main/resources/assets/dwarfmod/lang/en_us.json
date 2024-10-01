@@ -1,5 +1,7 @@
 {
   "item.dwarfmod.mithril_ingot": "Mithril Ingot",
+  "item.dwarfmod.mithril_minecart": "Mithril Minecart",
+  "item.dwarfmod.raw_mithril": "Raw Mithril",
   "item.dwarfmod.mithril_sword": "Mithril Sword",
   "item.dwarfmod.mithril_shovel": "Mithril Shovel",
   "item.dwarfmod.mithril_pickaxe": "Mithril Pickaxe",
@@ -9,9 +11,10 @@
   "item.dwarfmod.mithril_chestplate": "Mithril Chestplate",
   "item.dwarfmod.mithril_leggings": "Mithril Leggings",
   "item.dwarfmod.mithril_boots": "Mithril Boots",
-  "item.dwarfmod.mithril_minecart": "Mithril Minecart",
 
   "block.dwarfmod.mithril_block": "Mithril Block",
   "block.dwarfmod.mithril_ore": "Mithril Ore",
-  "block.dwarfmod.deepslate_mithril_ore": "Deepslate Mithril Ore"
+  "block.dwarfmod.deepslate_mithril_ore": "Deepslate Mithril Ore",
+
+  "itemgroup.dwarfmod.dwarfmod_group": "Dwarf Mod"
 }

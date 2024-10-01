@@ -25,12 +25,14 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.MITHRIL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MITHRIL_MINECART, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_MITHRIL, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.MITHRIL_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MITHRIL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MITHRIL_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MITHRIL_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MITHRIL_HOE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.MITHRIL_MINECART, Models.GENERATED);
 
         itemModelGenerator.registerArmor((ArmorItem) ModItems.MITHRIL_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.MITHRIL_CHESTPLATE);

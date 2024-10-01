@@ -1,0 +1,9 @@
+// 1.21.1	2024-10-01T10:26:00.285341	Dwarf Mod/Tags for minecraft:item
+ebf6c1bbb554cf0b47dd0d858b398a84a70478fc data\minecraft\tags\item\hoes.json
+afb3716136d7acee3a64ddea6877fe2a4ba74ae0 data\minecraft\tags\item\foot_armor.json
+efcccdd5ecfec877572f0fc1e4dc157144044067 data\minecraft\tags\item\axes.json
+3810897e2769dac15e9ab7016628002f02b31038 data\minecraft\tags\item\chest_armor.json
+da763c9c784081306a1d5e707405323a65dd4d5c data\minecraft\tags\item\head_armor.json
+4b9282e2d6b47501c13864306c8cdf780951489d data\minecraft\tags\item\shovels.json
+b178e9b33d619e0dbc36a4b3d27faf8077c98afc data\minecraft\tags\item\leg_armor.json
+b9f6cc933670e3dc7e2382d7339ce29abdc5cc27 data\minecraft\tags\item\pickaxes.json

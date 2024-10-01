@@ -20,6 +20,6 @@ public class ModEntities {
     );
 
     public static void registerModEntities() {
-        DwarfMod.LOGGER.info("Registering Entities for " + DwarfMod.MOD_ID + "!");
+        DwarfMod.LOGGER.info("Registering Entities for " + DwarfMod.MOD_ID + "!!!");
     }
 }

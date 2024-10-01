@@ -10,7 +10,10 @@ import net.sleepykairo.dwarfmod.item.custom.MithrilMinecartItem;
 
 public class ModItems {
 
-    public static final Item MITHRIL_INGOT = registerItem("mithril_ingot", new Item(new Item.Settings()));
+    public static final Item MITHRIL_INGOT = registerItem("mithril_ingot", new Item(new Item.Settings().fireproof()));
+    public static final Item MITHRIL_MINECART = registerItem("mithril_minecart", new MithrilMinecartItem(AbstractMinecartEntity.Type.CHEST, new Item.Settings().fireproof()));
+    public static final Item RAW_MITHRIL = registerItem("raw_mithril", new Item(new Item.Settings().fireproof()));
+
     public static final Item MITHRIL_SWORD = registerItem(
             "mithril_sword",
             new SwordItem(
@@ -43,7 +46,6 @@ public class ModItems {
                     ModToolMaterials.MITHRIL, new Item.Settings().fireproof().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.MITHRIL, -4.0F, 0.0F))
             )
     );
-    public static final Item MITHRIL_MINECART = registerItem("mithril_minecart", new MithrilMinecartItem(AbstractMinecartEntity.Type.CHEST, new Item.Settings().fireproof()));
 
     public static final Item MITHRIL_HELMET = registerItem(
             "mithril_helmet",
@@ -67,6 +69,6 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        DwarfMod.LOGGER.info("Registering Mod Items for " + DwarfMod.MOD_ID + "!");
+        DwarfMod.LOGGER.info("Registering Mod Items for " + DwarfMod.MOD_ID + "!!!");
     }
 }

@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.sleepykairo.dwarfmod.block.ModBlocks;
 import net.sleepykairo.dwarfmod.entity.ModEntities;
+import net.sleepykairo.dwarfmod.item.ModItemGroups;
 import net.sleepykairo.dwarfmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,5 +27,6 @@ public class DwarfMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModEntities.registerModEntities();
+		ModItemGroups.registerItemGroups();
 	}
 }
