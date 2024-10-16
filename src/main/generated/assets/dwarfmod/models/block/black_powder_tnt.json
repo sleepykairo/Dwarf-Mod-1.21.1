@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "dwarfmod:block/black_powder_tnt_bottom",
+    "side": "dwarfmod:block/black_powder_tnt_side",
+    "top": "dwarfmod:block/black_powder_tnt_top"
+  }
+}

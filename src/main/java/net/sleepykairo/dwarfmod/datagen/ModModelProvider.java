@@ -2,9 +2,11 @@ package net.sleepykairo.dwarfmod.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TexturedModel;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Arm;
 import net.sleepykairo.dwarfmod.block.ModBlocks;
@@ -20,6 +22,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MITHRIL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MITHRIL_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_MITHRIL_ORE);
+
+        blockStateModelGenerator.registerSingleton(ModBlocks.BLACK_POWDER_TNT, TexturedModel.CUBE_BOTTOM_TOP);
     }
 
     @Override
